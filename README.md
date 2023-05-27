@@ -171,6 +171,7 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
           - But that would change the whole logic of the `FormSearchCars` as well, as I will no longer need to call a dispatch for `getSortedPostsAsyncThunk`on button clicks but rather update a state that - may perhaps be moved inside `Post.tsx`'s `useEffect`'s dependency list of state - which will be checking against the single source of truth and based on those state changes I can just fetch new Data accordingly. That'd need quiet a bit of refactoring.
 
 30. New UI/UX ideas for the `clearInputField` button inside `FormSearchCars` I'm thinking if I should give it a function call to `getSortedPostsAsyncThunk` and reset the field but at the beginning my goal was to keep its functionality as only the cleanup of a text field and nothing else & if User needs an empty field re-search: then User will just click the "Search" button (_SVG icon_) again.
+31. Image-wise I could have used on the backend `const buffer = Buffer.from(valueBYTEA, 'hex')` and then unwrap the `buffer` like so: `const arrayBuffer = buffer.buffer` and pass it in place of `post_image_buffer` so that I wouldn't need to use `Uint8Array` on frontend & only to use `Blob` directly on the received `post_image_buffer`. But as-is currently works well.
 
 ##### Further plans (_reminders for me_)
 
