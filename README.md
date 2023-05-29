@@ -172,6 +172,7 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
 
 30. New UI/UX ideas for the `clearInputField` button inside `FormSearchCars` I'm thinking if I should give it a function call to `getSortedPostsAsyncThunk` and reset the field but at the beginning my goal was to keep its functionality as only the cleanup of a text field and nothing else & if User needs an empty field re-search: then User will just click the "Search" button (_SVG icon_) again.
 31. Image-wise I could have used on the backend `const buffer = Buffer.from(valueBYTEA, 'hex')` and then unwrap the `buffer` like so: `const arrayBuffer = buffer.buffer` and pass it in place of `post_image_buffer` so that I wouldn't need to use `Uint8Array` on frontend & only to use `Blob` directly on the received `post_image_buffer`. But as-is currently works well.
+32. I can avoid `Loading` when User is creating a NEW Post -> I can modify the Redux slice state of `posts` and I can `.unshift` it to be added on top of the `Posts` Array visually; meaning: adding that newly created post to the beginning of the list of `Posts` state. However that was my logical decision where I didn't wanted to do that, because if my User is at Page `3` when they had created this `Post` then its false to print that the new POST as if it is added at Page `3`rd when instead it really is at Page `1`st. Hence why my final UI/U decision is: I'm navigating the User back up at `1`st Page & re-fetching the `Posts` data.
 
 ##### Further plans (_reminders for me_)
 
