@@ -174,6 +174,10 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
 31. Image-wise I could have used on the backend `const buffer = Buffer.from(valueBYTEA, 'hex')` and then unwrap the `buffer` like so: `const arrayBuffer = buffer.buffer` and pass it in place of `post_image_buffer` so that I wouldn't need to use `Uint8Array` on frontend & only to use `Blob` directly on the received `post_image_buffer`. But as-is currently works well.
 32. I can avoid `Loading` when User is creating a NEW Post -> I can modify the Redux slice state of `posts` and I can `.unshift` it to be added on top of the `Posts` Array visually; meaning: adding that newly created post to the beginning of the list of `Posts` state. However that was my logical decision where I didn't wanted to do that, because if my User is at Page `3` when they had created this `Post` then its false to print that the new POST as if it is added at Page `3`rd when instead it really is at Page `1`st. Hence why my final UI/U decision is: I'm navigating the User back up at `1`st Page & re-fetching the `Posts` data.
 33. My JWT Token size seems to have a lot more room for future details: if by the google's result of calculating the `bytes` of my JWT is right: 1 character = 1 `byte` -> and then 1 kB === 1000 `bytes` then <a href="https://www.lettercount.com" target="_blank">lettercount.com</a> says I have total of below ~300 characters === ~300 `bytes` === 0.3kB which is far below the HTTP Header's value max limits of `8kB` as stated per https://jwt.io/introduction.
+34. https://github.com/Aleksandar15/Cars-Club-frontend/pull/68 HotFix3: Removed the useEffect in `Post.tsx` that's unnecessarily running on-render/on-mount and the `useSelectorTyped` calls that re-render `Post.tsx` which has an expensive JSX **that is:** `img`'s `src` **value** has `convertBufferToImgSRC` function that converts Buffer Data into images & *unexpectedly* its results are shown into Network tab of the DevTools!
+    - That `convertBufferToImgSRC` function could be converted into `useMemo` in the future, perhaps, but looks good for now.
+35. A
+36. B
 
 ##### Further plans (_reminders for me_)
 
