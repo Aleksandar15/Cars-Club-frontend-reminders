@@ -186,3 +186,6 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
 2. Have a comments section which `comments` table that will relate with each `post` Row of the `posts` table and `FOREIGN KEY` "user_id" column to `REFERENCE` `users` table.
 3. Have a replies sections: such that `replies` table will have to connect with "comment_id" from `comments` table & the "user_id" from `users` table.
 4. Planning for having a user-profile section (will write more info in the future).
+
+##### Further plans & longer information (_reminders for me_)
+4. Ideas for the user-profile section will have any of the following features: 1. Change profile picture, 2. Change password
