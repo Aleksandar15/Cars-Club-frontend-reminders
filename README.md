@@ -189,5 +189,5 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
 
 ##### Further plans & longer information (_reminders for me_)
 4. Ideas for the user-profile section will have any of the following features:
- - 1. Change profile picture,
- - 2. Change password.
+  - '1'. Change profile picture,
+ - #2. Change password.
