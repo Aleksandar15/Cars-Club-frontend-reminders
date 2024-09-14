@@ -190,5 +190,6 @@ My <a href="https://github.com/Aleksandar15/Cars-CLub-frontend">Cars Club Fronte
 ##### Further plans & longer information (_reminders for me_)
 4. Ideas for the user-profile section will have any of the following features:
   - #1. Change profile picture,
+      - For which I may have the need to just place a dummy pic to download
  - #2. Change password.
    - On the change password feature: I may just plan it for later, cuz the auto-login of 'Test' user's password must remain the same as always.
